@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Page Title</title>
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+		<style type="text/css">
+			.card-columns {
+			    column-count: 5;
+			  }
+		</style>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<h1 class="text-center">Worldwide</h1>
+				<div class="card-columns">
+					{% for trend in trends.global %}
+					<div class="card">
+					    <div class="card-body">
+					      <a href="{{trend.url}}"><h5 class="card-title">{{trend.name}}</h5></a>
+					      <p class="card-text">{{trend.volume}}</p>
+					      <p class="card-text"><small class="text-muted">{{trend.time}}</small></p>
+					    </div>
+					 </div>
+					 {% endfor %}
+				</div>
+				<h1 class="text-center">Pakistan</h1>
+				<div class="card-columns">
+					{% for trend in trends.pakistan %}
+					<div class="card">
+					    <div class="card-body">
+					      <a href="{{trend.url}}"><h5 class="card-title">{{trend.name}}</h5></a>
+					      <p class="card-text">{{trend.volume}}</p>
+					      <p class="card-text"><small class="text-muted">{{trend.time}}</small></p>
+					    </div>
+					</div>
+					{% endfor %}
+				</div>
+				<h1 class="text-center">Lahore</h1>
+				<div class="card-columns">
+					{% for trend in trends.lahore %}
+					<div class="card">
+					    <div class="card-body">
+					      <a href="{{trend.url}}"><h5 class="card-title">{{trend.name}}</h5></a>
+					      <p class="card-text">{{trend.volume}}</p>
+					      <p class="card-text"><small class="text-muted">{{trend.time}}</small></p>
+					    </div>
+					</div>
+					{% endfor %}
+				</div>
+				<h1 class="text-center">Karachi</h1>
+				<div class="card-columns">
+					{% for trend in trends.karachi %}
+					<div class="card">
+					    <div class="card-body">
+					      <a href="{{trend.url}}"><h5 class="card-title">{{trend.name}}</h5></a>
+					      <p class="card-text">{{trend.volume}}</p>
+					      <p class="card-text"><small class="text-muted">{{trend.time}}</small></p>
+					    </div>
+					</div>
+					{% endfor %}
+				</div>
+				<h1 class="text-center">India</h1>
+				<div class="card-columns">
+					{% for trend in trends.india %}
+					<div class="card">
+					    <div class="card-body">
+					      <a href="{{trend.url}}"><h5 class="card-title">{{trend.name}}</h5></a>
+					      <p class="card-text">{{trend.volume}}</p>
+					      <p class="card-text"><small class="text-muted">{{trend.time}}</small></p>
+					    </div>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		
+
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+	</body>
+</html>
